@@ -1,0 +1,102 @@
+:root {
+  --light-bluish-purple: hsla(229, 100%, 95%, 1);
+  --light-purple: hsla(230, 48%, 87%, 1);
+  --purple: hsla(270, 50%, 40%, 1);
+  --dark-purple: hsla(257, 72%, 42%, 1);
+  --pink: hsla(319, 57%, 53%, 1);
+  --text-color: hsla(0, 0%, 0%, 0.7);
+  --linear-gradient: hsla(227, 73%, 38%, 0.76), hsla(220, 49%, 58%, 0.82),
+    hsla(284, 68%, 30%, 0.63);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  background-color: var(--light-bluish-purple);
+  font-size: 18px;
+  padding-top: 20%;
+
+  @media (min-width: 630px) {
+    padding-top: 15%;
+  }
+
+  @media (min-width: 827px) {
+    padding-top: 10%;
+  }
+}
+
+main {
+  border-radius: 20px;
+  border: 0.5px solid var(--purple);
+  background: var(--light-purple);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 315px;
+  gap: 15px;
+  margin: auto;
+  max-width: 600px;
+  padding: 50px 32px;
+  width: 90%;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+}
+
+h1 {
+  background: linear-gradient(271deg, var(--linear-gradient));
+  background-clip: text;
+  font-size: 32px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p {
+  text-align: center;
+}
+
+.day-of-the-week {
+  color: var(--dark-purple);
+}
+
+.utc-time {
+  color: var(--pink);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+a span {
+  vertical-align: super;
+}
