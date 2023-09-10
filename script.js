@@ -11,8 +11,6 @@ const daysOfTheWeek = [
   "Saturday",
 ];
 
-console.log("anneyng");
-
 window.addEventListener("load", getCurrentDayOfTheWeek);
 window.addEventListener("load", getCurrentUTCTime);
 
@@ -22,6 +20,6 @@ function getCurrentDayOfTheWeek() {
 }
 
 function getCurrentUTCTime() {
-  let timeInMs = new Date().getTime();
+  let timeInMs = new Date().getUTCMilliseconds();
   currentUTCTime.innerText = timeInMs;
 }
